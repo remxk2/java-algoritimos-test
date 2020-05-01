@@ -3,6 +3,8 @@ package main.java.algoritmos;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
+
 
 public class Algoritmos {
 	
@@ -15,11 +17,8 @@ public class Algoritmos {
 		 */
 		
 		/* Algoritmo aqui */
-		Integer total = 0;
-		for(Integer valor: valores) if(valor < target) total++;
 		
-
-		return total;
+		return 1;
 	}
 	
 	public List<Integer> numerosParesEimpares(List<Integer> valores) {
@@ -28,18 +27,9 @@ public class Algoritmos {
 		 * Exemplo: Array[3, 6, 1, 0, 10, 8]
 		 * O resultado deverá retornar uma lista contendo dois valores [4, 2], 4 pares, 2 ímpares, 0 podem ser contados como pares.
 		 */
-		List<Integer> resultado = new ArrayList<Integer>();
-		Integer pares = 0;
-		Integer impares = 0;
-		for(Integer valor: valores) {
-			if(valor % 2 == 0) pares++; 
-			else impares++;
-		}
-		
-		resultado.add(pares);
-		resultado.add(impares);
 
-		return resultado;
+
+		return List.of(1);
 	}
 	
 	public int joias(String jewels, String stones) {
@@ -50,15 +40,9 @@ public class Algoritmos {
 		 * O resultado deverá retornar 2 pois "a" e "A" são jóias, e no meio das pedras podemos notar que existe um "aA" bem no final.
 		 */
 		
-		List<String> j = Arrays.asList(jewels.split(""));
-		List<String> s = Arrays.asList(stones.split(""));
-		Integer total = 0;
-		for(String joia: j) {
-			if(s.contains(joia)) total++;
-		}
 		
 		
-		return total;
+		return 1;
 	}
 	
 	public String removerLetrasDuplicadas(String letras) {
@@ -69,15 +53,7 @@ public class Algoritmos {
 		 * O resultado deverá retornar "GyWCpbJslzFtQEAMrIUk".
 		 */
 
-		List<String> l = Arrays.asList(letras.split(""));
-		List<String> found = new ArrayList<String>();
-
-		for(String letra: l) {
-			if(!found.contains(letra.toUpperCase()) && !found.contains(letra.toLowerCase())) found.add(letra);
-		}
-		
-		
-		return String.join("", found);
+		return "s";
 	}
 	
 	
@@ -89,12 +65,31 @@ public class Algoritmos {
 		 * O resultado deverá retornar [3, 5, 8].
 		 */
 
-		Integer len = valores.size();
-		Integer a = (int) Math.ceil(len * 0.25);
-		Integer b = (int) Math.ceil(len * 0.50);
-		Integer c = (int) Math.ceil(len * 0.75);
-		
-		return List.of(valores.get(a), valores.get(b), valores.get(c));
+		return List.of(1);
 	}
+	
+	
+	public String TitleName(String text) {
+		/* Você recebera uma string contendo varias palavras.
+		 * Capitalize a primeira letra de cada palavra dentro desta string e retorno o valor;
+		 * Exemplo: "o rato roeu a roupa do rei de roma"
+		 * O resultado deve ser: "O Ratou Roeu A Rouma Do Rei De Roma"
+		 */
+		
+		return "s";
+	}
+	
+	public List<Integer> menorDiferenca(List<Integer> valores) {
+		/* Você recebera um array de numeros reais.
+		 * Calcule a menor diferença entre os digitos, retorne os digitos e a diferença;
+		 * Caso houver mais que um grupo, traga o primeiro.
+		 * Exemplo: [9, 1, 20, 54, 2, 15, 33, 47]
+		 * O resultado deve ser: [1, 2, 1]
+		 * Explicação: A menor diferença entre dois digitos do array é 1 e 2 porque a diferença entre eles é 1 [1, 2, 1]
+		 */
+		
+		return List.of(1);
+	}
+	
 
 }
